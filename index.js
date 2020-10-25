@@ -5,6 +5,8 @@ const cors=require('cors')
 server.use(cors())
 
 server.use(express.json())
+server.use(express.static('build'))
+
 
 const zahtjevInfo = (req,res,next)=>{
     console.log('Metoda: ',req.method)
